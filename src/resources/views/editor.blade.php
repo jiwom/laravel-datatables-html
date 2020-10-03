@@ -1,4 +1,4 @@
-(function(window,$){
+$(function(){
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'}});
     window.LaravelDataTables = window.LaravelDataTables || {};
     @foreach($editors as $editor)
@@ -9,4 +9,4 @@
         @endforeach
     @endforeach
     window.LaravelDataTables["%1$s"] = $("#%1$s").DataTable(%2$s);
-})(window,jQuery);
+});
